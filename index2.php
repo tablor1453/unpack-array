@@ -109,5 +109,4 @@ foreach($array as $item)
 }
 // echo json_encode($result);
 
-
 ?>
