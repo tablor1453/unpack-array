@@ -1,6 +1,5 @@
 <?php
 
-
     $data = [
         ['tahun_neraca' => "2015", "jumlah_bijih_SD" => 1000000, 'jumlah_bijih_CAD' => 20000000, "jumlah_logam_SD" => 1000000, 'jumlah_logam_CAD' => 20000000],
         ['tahun_neraca' => "2015", "jumlah_bijih_SD" => 1000000, 'jumlah_bijih_CAD' => 20000000, "jumlah_logam_SD" => 1000000, 'jumlah_logam_CAD' => 20000000],
@@ -31,10 +30,6 @@
         ["tahun_neraca" => "2018", "jumlah_bijih_SD" => "32250000", "jumlah_bijih_CAD" => "0", "jumlah_logam_SD" => "3.87", "jumlah_logam_CAD" => "0"],
         ["tahun_neraca" => "2019", "jumlah_bijih_SD" => 32250000, "jumlah_bijih_CAD" => 0, "jumlah_logam_SD" => 3.87, "jumlah_logam_CAD" => 0]
     ];
-
-   
-
-
     
     function unpackArray($dataRaw) {
 
@@ -46,7 +41,6 @@
             if(!in_array($data['tahun_neraca'], $arrayKey)){
                 $arrayKey[] = $data['tahun_neraca'];
             }
-           
         }
 
         $length = count($arrayKey);
@@ -70,7 +64,6 @@
                             $dataArray[$data['tahun_neraca']]['jumlah_bijih_CAD'] = isset($data['jumlah_bijih_CAD']) ? $data['jumlah_bijih_CAD'] : null;
                             $dataArray[$data['tahun_neraca']]['jumlah_logam_SD'] = isset($data['jumlah_logam_SD']) ? $data['jumlah_logam_SD'] : null;
                             $dataArray[$data['tahun_neraca']]['jumlah_logam_CAD'] = isset($data['jumlah_logam_CAD']) ? $data['jumlah_logam_CAD'] : null;
-                            
                         }else{
                             // echo "jumlah nilai \n"; //for check proses increment array value
                             $dataArray[$data['tahun_neraca']]['jumlah_bijih_SD'] += (float)$data['jumlah_bijih_SD'];
